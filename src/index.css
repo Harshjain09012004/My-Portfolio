@@ -1,0 +1,28 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.animated-border {
+    --border-size: 2px;
+    --radius: 12px;
+    --angle: 0deg;
+    border-radius: var(--radius);
+    background:
+        linear-gradient(#ffffff, #ffffff) padding-box,
+        conic-gradient(from var(--angle), #ff6b6b, #ffd93d, #6bffcf, #6b8bff, #ff6bc3, #ff6b6b) border-box;
+    border: var(--border-size) solid transparent;
+    background-clip: padding-box, border-box;
+    animation: rotate-angle 1s linear infinite;
+}
+
+.animated-border>.inner {
+    padding: 2rem;
+    border-radius: calc(var(--radius) - var(--border-size));
+    display: block;
+}
+
+@keyframes rotate-angle {
+    to {
+        --angle: 360deg;
+    }
+}
