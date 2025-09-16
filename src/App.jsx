@@ -1,10 +1,41 @@
 import { Link } from "react-router-dom";
+import { Link as ScrollLink } from "react-scroll";
 import { FaGithub, FaLinkedin, FaEnvelope } from "react-icons/fa";
 
 export default function App() {
   return (
-    <div className="font-poppins bg-gradient-to-br from-gray-50 to-gray-200 min-h-screen text-gray-900 mt-16">
-      <section className="flex flex-col items-center justify-center text-center py-20">
+    <div className="font-poppins bg-gradient-to-br from-gray-50 to-gray-200 min-h-screen text-gray-900 relative">
+      <nav className="bg-blue-200/30 h-14 sticky top-0 px-10 flex justify-between place-items-center gap-10">
+        <ScrollLink className="flex gap-1 text-lg cursor-pointer" to="contact" smooth={true} duration={500}>
+          <p className="text-indigo-500 font-semibold">{"</> "}</p> 
+          <p className="text-blue-800 font-semibold">{"Harsh Jain"}</p>
+          <p className="text-indigo-500 font-semibold">{" </>"}</p>
+        </ScrollLink>
+
+        <div className="flex justify-center place-items-center gap-10">
+          <ScrollLink className="cursor-pointer hover:text-indigo-400 transition-all" to="experience" smooth={true} duration={500}>
+            Experience
+          </ScrollLink>
+
+          <ScrollLink className="cursor-pointer hover:text-indigo-400 transition-all"  to="projects" smooth={true} duration={500}>
+            Projects
+          </ScrollLink>
+
+          <ScrollLink className="cursor-pointer hover:text-indigo-400 transition-all"  to="skills" smooth={true} duration={500}>
+            Skills
+          </ScrollLink>
+
+          <ScrollLink className="cursor-pointer hover:text-indigo-400 transition-all"  to="achievements" smooth={true} duration={500}>
+            Achievements
+          </ScrollLink>
+
+          <ScrollLink className="cursor-pointer hover:text-indigo-400 transition-all"  to="contact" smooth={true} duration={500}>
+            Contact
+          </ScrollLink>
+        </div>
+      </nav>
+
+      <section name="contact" className="flex flex-col items-center justify-center text-center py-20">
         <div className="w-40 h-40 rounded-full overflow-hidden shadow-lg border-4 border-blue-600">
           <img
             src="/developer.jpg"
@@ -65,7 +96,7 @@ export default function App() {
       </section>
 
       {/* Skills */}
-      <section className="max-w-5xl mx-auto py-12 px-6">
+      <section name="skills" className="max-w-5xl mx-auto py-12 px-6">
         <h2 className="text-3xl font-semibold mb-6">Skills</h2>
         <div className="flex flex-wrap gap-3">
           {[
@@ -118,7 +149,7 @@ export default function App() {
       </section>
 
       {/* Projects */}
-      <section id="projects" className="bg-white py-12">
+      <section name="projects" className="bg-white py-12">
         <div className="max-w-5xl mx-auto px-6">
           <h2 className="text-3xl font-semibold mb-10">Projects</h2>
 
@@ -186,7 +217,7 @@ export default function App() {
       
       <div className="w-full bg-indigo-50">
         {/* Experience */}
-        <section className="max-w-5xl mx-auto py-12 px-6">
+        <section name="experience" className="max-w-5xl mx-auto py-12 px-6">
           <h2 className="text-3xl font-semibold mb-6">Experience</h2>
           <ul className="border-l-2 border-blue-600 pl-6 space-y-10">
             <li>
@@ -214,7 +245,7 @@ export default function App() {
         </section>
 
         {/* Achievements */}
-        <section className="max-w-5xl mx-auto py-12 px-6">
+        <section name="achievements" className="max-w-5xl mx-auto py-12 px-6">
           <h2 className="text-3xl font-semibold mb-6">Achievements</h2>
           <div className="grid md:grid-cols-3 gap-6">
             <Link target="_blank" to={'https://leetcode.com/u/Astute_Coder/'} className="bg-white rounded-xl shadow hover:shadow-lg transition border border-blue-400 flex justify-center place-items-center gap-4 p-6">
