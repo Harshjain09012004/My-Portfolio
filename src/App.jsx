@@ -5,31 +5,34 @@ import { FaGithub, FaLinkedin, FaEnvelope } from "react-icons/fa";
 export default function App() {
   return (
     <div className="font-poppins bg-gradient-to-br from-gray-50 to-gray-200 min-h-screen text-gray-900 relative">
-      <nav className="bg-blue-200/30 h-14 sticky top-0 px-10 flex justify-between place-items-center gap-10">
+      <nav className="bg-blue-200/30 h-14 sticky top-0 px-10 flex justify-between place-items-center gap-10 backdrop-blur-sm">
         <ScrollLink className="flex gap-1 text-lg cursor-pointer" to="contact" smooth={true} duration={500}>
           <p className="text-indigo-500 font-semibold">{"</> "}</p> 
           <p className="text-blue-800 font-semibold">{"Harsh Jain"}</p>
           <p className="text-indigo-500 font-semibold">{" </>"}</p>
         </ScrollLink>
 
-        <div className="flex justify-center place-items-center gap-10">
-          <ScrollLink className="cursor-pointer hover:text-indigo-400 transition-all" to="experience" smooth={true} duration={500}>
+        <div className="flex justify-center place-items-center gap-8">
+          <ScrollLink className="cursor-pointer text-indigo-600 transition-all hover:border  border-blue-600 p-1 px-2 rounded-lg" to="experience" smooth={true} duration={500}
+          offset={-40}>
             Experience
           </ScrollLink>
 
-          <ScrollLink className="cursor-pointer hover:text-indigo-400 transition-all"  to="projects" smooth={true} duration={500}>
+          <ScrollLink className="cursor-pointer text-indigo-600 transition-all hover:border  border-blue-600 p-1 px-2 rounded-lg"  to="projects" smooth={true} duration={500} offset={-40}>
             Projects
           </ScrollLink>
 
-          <ScrollLink className="cursor-pointer hover:text-indigo-400 transition-all"  to="skills" smooth={true} duration={500}>
+          <ScrollLink className="cursor-pointer text-indigo-600 transition-all hover:border  border-blue-600 p-1 px-2 rounded-lg"  to="skills" smooth={true} duration={500}
+          offset={-40}>
             Skills
           </ScrollLink>
 
-          <ScrollLink className="cursor-pointer hover:text-indigo-400 transition-all"  to="achievements" smooth={true} duration={500}>
+          <ScrollLink className="cursor-pointer text-indigo-600 transition-all hover:border  border-blue-600 p-1 px-2 rounded-lg"  to="achievements" smooth={true} duration={500}
+          offset={-40}>
             Achievements
           </ScrollLink>
 
-          <ScrollLink className="cursor-pointer hover:text-indigo-400 transition-all"  to="contact" smooth={true} duration={500}>
+          <ScrollLink className="cursor-pointer text-indigo-600 transition-all hover:border  border-blue-600 p-1 px-2 rounded-lg"  to="contact" smooth={true} duration={500}>
             Contact
           </ScrollLink>
         </div>
@@ -156,7 +159,7 @@ export default function App() {
           <h3 className="text-2xl font-bold mb-4">Full Stack Projects</h3>
           <div className="grid md:grid-cols-2 gap-6 mb-12">
             <div className="animated-border">
-              <Link target="_blank" to={'https://code-mate-ten.vercel.app/'} className="inner rounded-xl bg-gradient-to-br from-white via-gray-50 to-indigo-50">
+              <Link target="_blank" to={'https://code-mate-ten.vercel.app/'} className="inner rounded-xl hover:bg-pink-50/20 transition-all">
                 <h3 className="text-xl font-bold">Code-Mate</h3>
                 <p className="text-gray-600 mt-2">
                   Built a real-time coding platform enabling
@@ -165,19 +168,20 @@ export default function App() {
               </Link>
             </div>
             
-
-            <Link target="_blank" to={'https://report-x-eight.vercel.app/'} className="p-6 rounded-xl bg-gray-50 shadow hover:shadow-lg transition border border-blue-300">
-              <h3 className="text-xl font-bold">ReportX</h3>
-              <p className="text-gray-600 mt-2">
-                MERN-based complaint management system with data visualization,
-                role-based access, and tracking functionality.
-              </p>
-            </Link>
+            <div className="animated-border">
+              <Link target="_blank" to={'https://report-x-eight.vercel.app/'} className="inner rounded-xl hover:bg-pink-50/20 transition-all">
+                <h3 className="text-xl font-bold">ReportX</h3>
+                <p className="text-gray-600 mt-2">
+                  MERN-based complaint management system with data visualization,
+                  role-based access, and tracking functionality. Handles authentication and password management with hashing & JWT.
+                </p>
+              </Link>
+            </div>
           </div>
 
           <h3 className="text-2xl font-bold mb-4">Backend Projects</h3>
           <div className="grid md:grid-cols-2 gap-6 mb-12">
-            <Link target="_blank" to={'https://github.com/Harshjain09012004/LetsCode-Project-Links'} className="p-6 rounded-xl bg-gray-50 shadow hover:shadow-lg transition border border-blue-300">
+            <Link target="_blank" to={'https://github.com/Harshjain09012004/LetsCode-Project-Links'} className="p-6 rounded-xl bg-blue-200/10 backdrop-blur-3xl shadow hover:shadow-lg transition border-2 border-blue-300">
               <h3 className="text-xl font-bold">LetsCode</h3>
               <p className="text-gray-600 mt-2">
                 Microservice-based coding platform supporting multiple languages,
@@ -248,7 +252,7 @@ export default function App() {
         <section name="achievements" className="max-w-5xl mx-auto py-12 px-6">
           <h2 className="text-3xl font-semibold mb-6">Achievements</h2>
           <div className="grid md:grid-cols-3 gap-6">
-            <Link target="_blank" to={'https://leetcode.com/u/Astute_Coder/'} className="bg-white rounded-xl shadow hover:shadow-lg transition border border-blue-400 flex justify-center place-items-center gap-4 p-6">
+            <Link target="_blank" to={'https://leetcode.com/u/Astute_Coder/'} className="bg-white rounded-xl shadow hover:shadow-lg transition border-2 border-blue-400 flex justify-center place-items-center gap-4 p-6">
               <div className="w-10">
                 <img title="Leetcode" src="/tools/leetcode.png"/>
               </div>
@@ -258,7 +262,7 @@ export default function App() {
               </div>
             </Link>
 
-            <Link target="_blank" to={'https://leetcode.com/u/Astute_Coder/'} className="bg-white rounded-xl shadow hover:shadow-lg transition border border-blue-400 flex justify-center place-items-center gap-4 p-6">
+            <Link target="_blank" to={'https://leetcode.com/u/Astute_Coder/'} className="bg-white rounded-xl shadow hover:shadow-lg transition border-2 border-blue-400 flex justify-center place-items-center gap-4 p-6">
               <p className="text-4xl">
                 🏆
               </p>
@@ -269,7 +273,7 @@ export default function App() {
               </div>
             </Link>
 
-            <Link target="_blank" to={'https://cptrack.mitsgwalior.in/'} className="bg-white rounded-xl shadow hover:shadow-lg transition border border-blue-400 flex justify-center place-items-center p-6 gap-4">
+            <Link target="_blank" to={'https://cptrack.mitsgwalior.in/'} className="bg-white rounded-xl shadow hover:shadow-lg transition border-2 border-blue-400 flex justify-center place-items-center p-6 gap-4">
               <p className="text-4xl">
                 🥈
               </p>
@@ -286,7 +290,7 @@ export default function App() {
         <section className="max-w-5xl mx-auto py-12 px-6">
           <h2 className="text-3xl font-semibold mb-6">Certificates</h2>
           <div className="grid md:grid-cols-2 gap-6">
-            <Link target="_blank" to={'https://drive.google.com/file/d/1maOjJxGCj31Urq3TH0DVXn5KbGYmEDjN/view?usp=sharing'} className="p-6 bg-white rounded-xl shadow hover:shadow-lg transition border border-indigo-400 flex justify-center place-items-center gap-5">
+            <Link target="_blank" to={'https://drive.google.com/file/d/1maOjJxGCj31Urq3TH0DVXn5KbGYmEDjN/view?usp=sharing'} className="p-6 bg-white rounded-xl shadow hover:shadow-lg transition border-2 border-indigo-400 flex justify-center place-items-center gap-5">
               <div className="w-24 h-24">
                 <img title="Tree" src="/tree.png" className="w-24 object-cover"/>
               </div>
@@ -296,7 +300,7 @@ export default function App() {
               </div>
             </Link>
 
-            <Link target="_blank" to={'https://drive.google.com/file/d/1mw2Zfr2eKrVCimme_4BFWyzSA_tWfK44/view?usp=sharing'} className="p-6 bg-white rounded-xl shadow hover:shadow-lg  transition border border-indigo-400 flex justify-center place-items-center gap-5">
+            <Link target="_blank" to={'https://drive.google.com/file/d/1mw2Zfr2eKrVCimme_4BFWyzSA_tWfK44/view?usp=sharing'} className="p-6 bg-white rounded-xl shadow hover:shadow-lg  transition border-2 border-indigo-400 flex justify-center place-items-center gap-5">
               <div className="w-24">
                 <img title="Python" src="/python.png" className="w-24 object-cover"/>
               </div>

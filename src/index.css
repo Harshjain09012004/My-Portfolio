@@ -15,7 +15,7 @@
     animation: rotate-angle 1s linear infinite;
 }
 
-.animated-border>.inner {
+.inner {
     padding: 2rem;
     border-radius: calc(var(--radius) - var(--border-size));
     display: block;
